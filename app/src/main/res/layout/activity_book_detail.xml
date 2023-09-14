@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/row_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnBuyBook"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_marginTop="@dimen/_5px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/frameBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180px"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:background="@drawable/rectangle_bg_book_detail" />
+
+                <RelativeLayout
+                    android:id="@+id/frameOne"
+                    android:layout_width="@dimen/_120px"
+                    android:layout_height="@dimen/_180px"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_marginBottom="@dimen/_10px">
+
+                    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                        android:id="@+id/ivBook"
+                        android:layout_width="@dimen/_160px"
+                        android:layout_height="@dimen/_250px"
+                        android:layout_gravity="start"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/placeholder_portable"
+                        app:siShape="@drawable/image_round_shape"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/placeholder_portable" />
+
+                    <LinearLayout
+                        android:id="@+id/llPremium"
+                        style="@style/groupStyle_deep_orange_premium_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:layout_marginBottom="@dimen/_10px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageLock"
+                            android:layout_width="@dimen/_9px"
+                            android:layout_height="@dimen/_11px"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5px"
+                            android:layout_marginTop="@dimen/_5px"
+                            android:layout_marginEnd="@dimen/_5px"
+                            android:layout_marginBottom="@dimen/_5px"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_premium_lock"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_premium_lock" />
+
+                        <TextView
+                            android:id="@+id/tvPremium"
+                            style="@style/txtOpenSansRomanSemiBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5px"
+                            android:layout_marginEnd="@dimen/_5px"
+                            android:layout_marginBottom="@dimen/_5px"
+                            android:layout_weight="0.86"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/lbl_premium"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sp"
+                            tools:text="@string/lbl_premium" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180px"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_marginTop="@dimen/_30px"
+                    android:layout_marginEnd="@dimen/_5px"
+                    android:layout_toEndOf="@+id/frameOne"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBookName"
+                        style="@style/txt_OpenSansRomanBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:gravity="start"
+                        android:maxLines="3"
+                        android:text="@string/app_name"
+                        android:textColor="@color/gray_2"
+                        android:textSize="@dimen/_17sp"
+                        tools:text="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/tvByAuthor"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:ellipsize="marquee"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/detail_author"
+                        android:textSize="@dimen/_14sp"
+                        tools:text="@string/app_name" />
+
+                    <LinearLayout
+                        android:id="@+id/linearRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:layout_marginBottom="@dimen/_1px"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivView"
+                            android:layout_width="@dimen/_16px"
+                            android:layout_height="@dimen/_16px"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_1px"
+                            android:layout_marginBottom="@dimen/_1px"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_view"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_view" />
+
+                        <TextView
+                            android:id="@+id/tvBookView"
+                            style="@style/txtOpenSansRomanSemiBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5px"
+                            android:layout_marginTop="@dimen/_1px"
+                            android:layout_marginBottom="@dimen/_1px"
+                            android:layout_weight="0.29"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/detail_author"
+                            android:textSize="@dimen/_15sp"
+                            tools:text="0.0" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvBookPrice"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:background="@color/same"
+                        android:ellipsize="end"
+                        android:paddingStart="@dimen/_20px"
+                        android:paddingTop="@dimen/_4px"
+                        android:paddingEnd="@dimen/_20px"
+                        android:paddingBottom="@dimen/_4px"
+                        android:singleLine="true"
+                        android:textColor="@color/detail_white"
+                        android:textSize="@dimen/_15sp"
+                        tools:text="$0.0" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearButtonPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_15px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llFavourite"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivFav"
+                        android:layout_width="32dp"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_fav"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_fav" />
+
+                    <TextView
+                        android:id="@+id/tvFavourite"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10px"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/lbl_favourite"
+                        android:textColor="@color/detail_gray"
+                        android:textSize="@dimen/_13sp"
+                        tools:text="@string/lbl_favourite" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vlFav"
+                    android:layout_width="@dimen/_2px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:background="@drawable/rectangle_bg_detail_line"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/llDownload"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivDownload"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_download"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_download" />
+
+                    <TextView
+                        android:id="@+id/tvDownload"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10px"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/lbl_download"
+                        android:textColor="@color/detail_gray"
+                        android:textSize="@dimen/_13sp"
+                        tools:text="@string/lbl_download" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vlDownload"
+                    android:layout_width="@dimen/_2px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_weight="0.0"
+                    android:background="@drawable/rectangle_bg_detail_line"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/llReadBook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivReadBook"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_read_book"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_read_book" />
+
+                    <TextView
+                        android:id="@+id/tvReadBook"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10px"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/lbl_read_book"
+                        android:textColor="@color/detail_gray"
+                        android:textSize="@dimen/_13sp"
+                        tools:text="@string/lbl_read_book" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/vlReadBook"
+                    android:layout_width="@dimen/_2px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_weight="0.0"
+                    android:background="@drawable/rectangle_bg_detail_line"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:id="@+id/llReportBook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.25"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivReportBook"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_report_book"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_report_book" />
+
+                    <TextView
+                        android:id="@+id/tvReportBook"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10px"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/lbl_report_book"
+                        android:textColor="@color/detail_gray"
+                        android:textSize="@dimen/_13sp"
+                        tools:text="@string/lbl_report_book" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAboutBook"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_18px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/lbl_about_this_book"
+                android:textColor="@color/gray_2"
+                android:textSize="@dimen/_19sp"
+                tools:text="@string/lbl_about_this_book" />
+
+            <LinearLayout
+                android:id="@+id/llDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_8px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/wvBookDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlConSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_5px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ivRateList"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvRateReview"
+                        style="@style/txt_OpenSansRomanBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_ratings_review"
+                        android:textColor="@color/gray_2"
+                        android:textSize="@dimen/_19sp"
+                        tools:text="@string/lbl_ratings_review" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivRateList"
+                    android:layout_width="@dimen/_20px"
+                    android:layout_height="@dimen/_16px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_home_deep_orange"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_arrow_home_deep_orange" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvRateAvg"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/gray_2"
+                    android:textSize="@dimen/_24sp"
+                    tools:text="0.0" />
+
+                <com.github.ornolfr.ratingview.RatingView
+                    android:id="@+id/ratingView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8px"
+                    android:layout_marginEnd="@dimen/_8px"
+                    app:drawable_empty="@drawable/ic_star_empty"
+                    app:drawable_filled="@drawable/ic_star_filled"
+                    app:drawable_half="@drawable/ic_star_half"
+                    app:drawable_margin="2dp"
+                    app:drawable_size="22dp"
+                    app:is_indicator="true"
+                    app:max_count="5" />
+
+                <TextView
+                    android:id="@+id/tvRateTotalReviews"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/gray_2"
+                    android:textSize="@dimen/_18sp"
+                    tools:text="(4k Reviews)" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vlLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2px"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_bg_detail_line"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/llRateClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_15px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:layout_marginBottom="@dimen/_15px"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRateBook"
+                    style="@style/txt_OpenSansRomanBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_rate_this_book"
+                    android:textColor="@color/gray_2"
+                    android:textSize="@dimen/_19sp"
+                    tools:text="@string/lbl_rate_this_book" />
+
+                <com.github.ornolfr.ratingview.RatingView
+                    android:id="@+id/ratingView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:drawable_empty="@drawable/img_star_detail"
+                    app:drawable_filled="@drawable/img_star_detail"
+                    app:drawable_half="@drawable/img_star_detail"
+                    app:drawable_margin="15dp"
+                    app:drawable_size="35dp"
+                    app:is_indicator="false"
+                    android:layout_marginTop="@dimen/_8px"
+                    app:max_count="5" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnWriteAReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10px"
+                    android:background="@drawable/rectangle_border_review_btn"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_30px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:singleLine="true"
+                    android:text="@string/lbl_write_a_review"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_99"
+                    android:textSize="@dimen/_19sp"
+                    tools:text="@string/lbl_write_a_review" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRelatedSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <TextView
+                    android:id="@+id/tvRelatedBook"
+                    style="@style/txt_InterBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/ivRelated"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_related_books"
+                    android:textColor="@color/gray_2"
+                    android:textSize="@dimen/_19sp"
+                    tools:text="@string/lbl_related_books" />
+
+                <ImageView
+                    android:id="@+id/ivRelated"
+                    android:layout_width="@dimen/_20px"
+                    android:layout_height="@dimen/_20px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_home_deep_orange"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_arrow_home_deep_orange" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRelatedBook"
+                style="@style/groupStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5px"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/_20px"
+                android:paddingEnd="@dimen/_20px"
+                android:paddingBottom="@dimen/_15px" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@style/ProgressBar" />
+
+    <include
+        android:id="@+id/llNoData"
+        layout="@layout/no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBuyBook"
+        style="@style/txt_OpenSansRomanBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutAds"
+        android:layout_marginStart="@dimen/_20px"
+        android:layout_marginEnd="@dimen/_20px"
+        android:layout_marginBottom="@dimen/_10px"
+        android:background="@color/daytonight"
+        android:gravity="center"
+        android:text="@string/lbl_buy_book"
+        android:layout_alignWithParentIfMissing="true"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sp"
+        tools:text="@string/lbl_buy_book" />
+
+    <LinearLayout
+        android:id="@+id/layoutAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" />
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvFeature"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180px"
+        app:cardBackgroundColor="@color/about_icon_bg"
+        app:shapeAppearanceOverlay="@style/CornerRadiusImage">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_15px"
+                android:layout_marginEnd="@dimen/_15px"
+                android:layout_toStartOf="@+id/ivHomeFeature"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBookName"
+                    style="@style/txt_OpenSansRomanBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="@color/slider_title"
+                    android:textSize="@dimen/_17sp"
+                    tools:text="@string/app_name" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12px"
+                    app:cardBackgroundColor="@color/slider_btn_bg"
+                    app:shapeAppearanceOverlay="@style/CornerRadiusImage18">
+
+                    <TextView
+                        android:id="@+id/tvExplore"
+                        style="@style/txt_OpenSansRomanBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_20px"
+                        android:paddingTop="@dimen/_8px"
+                        android:paddingEnd="@dimen/_20px"
+                        android:paddingBottom="@dimen/_8px"
+                        android:text="@string/lbl_explore"
+                        android:textColor="@color/slider_btn_text"
+                        android:textSize="@dimen/_14sp"
+                        tools:text="@string/lbl_explore" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivHomeFeature"
+                android:layout_width="@dimen/_100px"
+                android:layout_height="@dimen/_150px"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15px"
+                android:src="@drawable/placeholder_portable"
+                app:shapeAppearanceOverlay="@style/CornerRadiusImage"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/placeholder_portable" />
+            <com.github.siyamed.shapeimageview.RoundedImageView
+                android:id="@+id/ivHomeFeature2"
+                android:layout_width="@dimen/_100px"
+                android:layout_height="@dimen/_150px"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15px"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:src="@drawable/placeholder_portable"
+                app:siRadius="@dimen/_10px"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/placeholder_portable" />
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

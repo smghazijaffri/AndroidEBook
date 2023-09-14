@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.siyamed.shapeimageview.CircularImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="@dimen/_60px"
+                    android:layout_height="@dimen/_60px"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_portable"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_weight="0.67"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/review_user"
+                        android:textSize="@dimen/_18sp"
+                        tools:text="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1px"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textColor="@color/review_time"
+                        android:textSize="@dimen/_12sp"
+                        tools:text="52 minute ago" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linear1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rectangle_border_star_normal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2px">
+
+                        <ImageView
+                            android:id="@+id/imageStarFour"
+                            android:layout_width="@dimen/_18px"
+                            android:layout_height="@dimen/_15px"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10px"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_star_rating"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_star_rating" />
+
+                        <TextView
+                            android:id="@+id/tvStarTotal"
+                            style="@style/txtOpenSansRomanSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10px"
+                            android:layout_marginEnd="@dimen/_10px"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/red_99"
+                            android:textSize="@dimen/_19sp"
+                            tools:text="4" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivOverFlowMenu"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_marginEnd="@dimen/_3px"
+                        android:layout_marginStart="@dimen/_10px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_more"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/ic_more" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvReviewMsg"
+                style="@style/txt_OpenSansRomanRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_2px"
+                android:textColor="@color/review_msg"
+                android:textSize="@dimen/_15sp"
+                tools:text="@string/app_name" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

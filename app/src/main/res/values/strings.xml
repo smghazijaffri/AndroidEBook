@@ -1,0 +1,246 @@
+<resources>
+    <string name="app_name">BOOK UP</string>
+
+    <string name="lbl_ebook_app">BOOK UP</string>
+    <string name="lbl_welcome_back">Welcome Back!</string>
+    <string name="lbl_let_s_log_in_a">Login in to continue</string>
+    <string name="lbl_email">Email*</string>
+    <string name="lbl_name">Name*</string>
+    <string name="lbl_pass">Password</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_remember_me">Remember me</string>
+    <string name="msg_forgot_password">Forgot Password?</string>
+    <string name="lbl_log_in">LOG IN</string>
+    <string name="lbl_skip">Skip</string>
+    <string name="msg_by_signing_in_y">By Signing in you accept</string>
+    <string name="msg_by_signing_up_policy">Privacy Policy</string>
+    <string name="msg_or_continue_with">Or continue with</string>
+    <string name="lbl_facebook">Facebook</string>
+    <string name="lbl_google">Google</string>
+    <string name="msg_don_t_have_an_a">Don\u2019t have an account?</string>
+    <string name="lbl_sign_up">Sign Up</string>
+    <string name="lbl_let_sing_up">"Let's Sign Up."</string>
+    <string name="lbl_register">REGISTER</string>
+    <string name="msg_by_signing_up_y">By Signing up you accept</string>
+    <string name="msg_already_have_acc">Already have an account?</string>
+    <string name="reg_log_in">Login</string>
+    <string name="lbl_send_email">SEND EMAIL</string>
+    <string name="lbl_forgot_password">Forgot Password</string>
+    <string name="msg_enter_your_email">Enter your valid email address below and we will send you email with instructions on how to change your password</string>
+    <string name="please_accept">Accept privacy policy</string>
+    <string name="please_enter_email">Please enter email</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="please_enter_name">please enter name</string>
+    <string name="please_enter_phone">Please enter phone no</string>
+
+    <string name="lbl_next">Next</string>
+    <string name="intro_title_1">Only Books Can Help You</string>
+    <string name="intro_desc_1">Books can help you to increase your knowledge and become more successfully.</string>
+    <string name="intro_title_2">Learn On Your Time Schedule</string>
+    <string name="intro_desc_2">Learn a lot of new skills with our interesting lessons by our courses and solve tasks</string>
+    <string name="intro_title_3">Welcome to Ebook App</string>
+    <string name="intro_desc_3">We have true friend in our life and the books is that. Book has power to change yourself and make you more valuable.</string>
+    <string name="lbl_get_started">Get Started</string>
+
+    <string name="no_data_found">No data found..</string>
+    <string name="lbl_search_here">Search here..</string>
+    <string name="lbl_featured">Featured </string>
+    <string name="msg_continue_reading">Continue Reading</string>
+    <string name="lbl_trending">Trending Books</string>
+    <string name="lbl_premium">Premium</string>
+    <string name="ok">OK</string>
+    <string name="failed_try_again">Failed try again</string>
+    <string name="internet_connection">No internet connection</string>
+    <string name="wrong">Something wrong..</string>
+    <string name="license_msg">You are using invalid License or Package name is already in use, for more information contact us: info@viaviweb.com or viaviwebtech@gmail.com</string>
+    <string name="share_msg">Download this app from this link</string>
+    <string name="lbl_explore">Explore Now</string>
+
+    <string name="by_author">by %s</string>
+    <string name="currency_code">%s %s</string>
+
+    <string name="cat_title">Categories</string>
+    <string name="author_title">Author</string>
+    <string name="latest_title">Latest</string>
+    <string name="lbl_show_in">Show In</string>
+    <string name="book_detail_title">Detail page</string>
+    <string name="lbl_favourite">Favorite</string>
+    <string name="lbl_download">Download</string>
+    <string name="lbl_read_book">Read</string>
+    <string name="lbl_report_book">Report</string>
+    <string name="lbl_about_this_book">About this book</string>
+    <string name="lbl_ratings_review">Ratings &amp; Reviews</string>
+    <string name="lbl_rate_this_book">Rate this book</string>
+    <string name="lbl_write_a_review">Write a Review</string>
+    <string name="lbl_related_books">Related Books</string>
+    <string name="lbl_author_books">Author Books</string>
+    <string name="lbl_author_info">Author Info</string>
+    <string name="msg_no_author_book">No author book found..</string>
+    <string name="lbl_review_detail">(%s Reviews)</string>
+
+    <string name="lbl_buy_book">Buy Book</string>
+    <string name="lbl_buy_plan">Buy Subscription</string>
+    <string name="lbl_buy_plan_title">Buy subscription or rent for this book</string>
+    <string name="rent_days">%s Day(s)</string>
+    <string name="no_rent">No rent book..</string>
+
+    <string name="star_all">All</string>
+    <string name="star_1">1</string>
+    <string name="star_2">2</string>
+    <string name="star_3">3</string>
+    <string name="star_4">4</string>
+    <string name="star_5">5</string>
+
+    <string name="lbl_book_review">Book Review</string>
+    <string name="msg_how_likely_are">How likely are you to recommend moving
+it to friend?(1-low,5-high)</string>
+    <string name="lbl_write_your_review">Write Your Review</string>
+    <string name="lbl_your_review_here">Your review here..</string>
+    <string name="lbl_maybe_later">Maybe Later</string>
+    <string name="lbl_submit">Submit</string>
+    <string name="loading">Loading..</string>
+    <string name="enter_review">Please write your review</string>
+
+    <string name="lbl_detail_report_book">Report Book</string>
+    <string name="lbl_detail_report_hint">Write reason here..</string>
+    <string name="lbl_detail_report_msg">Write reason here..</string>
+
+    <string name="lbl_report_comment">Report Comment</string>
+    <string name="report_delete">Delete</string>
+    <string name="report_report">Report</string>
+    <string name="lbl_delete_comment">Delete Comment</string>
+    <string name="delete_comment_msg">Are you sure you want delete ?</string>
+
+    <string name="lbl_setting">Settings</string>
+    <string name="setting_noti">Enable Push Notification</string>
+    <string name="setting_dark">Theme Mode</string>
+    <string name="setting_log_in">Log In</string>
+    <string name="setting_log_out">Log Out</string>
+    <string name="setting_more">More App</string>
+    <string name="setting_share">Share App</string>
+    <string name="setting_rate">Rate App</string>
+
+    <string name="lbl_app_version">App Version</string>
+    <string name="lbl_company">Company</string>
+    <string name="lbl_email_address">Email</string>
+    <string name="lbl_website">Website</string>
+    <string name="lbl_contact">Contact</string>
+    <string name="lbl_about_us">About Us</string>
+    <string name="lbl_about_us_title">About Us</string>
+    <string name="no_link_found">No link found</string>
+
+    <string name="logout_message">Are you sure you want to logout ?</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">CANCEL</string>
+    <string name="logout_yes">YES,LOGOUT</string>
+    <string name="logout_disable">Admin disable or delete your account</string>
+
+    <string name="you_have_allReady_download_book">You have already download this book</string>
+    <string name="downloading">Downloading</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="profile_edt">Edit</string>
+
+    <string name="tab_favorite">Favorite</string>
+    <string name="tab_download">Download</string>
+    <string name="tab_continue">Continue Book</string>
+    <string name="tab_subs">Subscription</string>
+    <string name="tab_rent">Rent Book</string>
+    <string name="login_require">Login required..</string>
+    <string name="lbl_delete">Delete</string>
+    <string name="delete_msg">Are you sure you want delete ?</string>
+    <string name="no_download">No download data found..</string>
+    <string name="no_favorite">No favorite data found..</string>
+    <string name="no_continue">No continue data found..</string>
+
+    <string name="profile_edt_title">Edit Profile</string>
+    <string name="profile_edt_save">SAVE CHANGES</string>
+    <string name="storage_permission">Please allow storage permission</string>
+    <string name="edit_gallery">Select Gallery</string>
+    <string name="edit_sel_gallery">Gallery</string>
+
+    <string name="lbl_free">Free</string>
+    <string name="lbl_paid">Paid</string>
+
+    <!-- if you want rtl then add true other wise false-->
+    <string name="isRTL">false</string>
+
+    <string name="search_title">Search Results</string>
+    <string name="search_msg">Please enter data</string>
+    <string name="subscription_plan">Subscription Plan</string>
+    <string name="subscription_msg">Full access to all free and premium content with download also. choose plan based on your usage. Below there are plan name,price and validity days.</string>
+    <string name="select_plan">SELECT PLAN</string>
+    <string name="no_plan">No plan found..</string>
+    <string name="no_payment">No payment method found..</string>
+    <string name="plan_line">/</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="payment_proceed">PROCEED TO PAY</string>
+    <string name="payment_select">Select payment method</string>
+    <string name="payment_success">Payment success</string>
+    <string name="back_to_home">BACK TO HOME</string>
+    <string name="pay">PAY</string>
+
+    <string name="my_subs">My Subscription</string>
+    <string name="current_plan">Current Plan : </string>
+    <string name="expired_on">Expired On : </string>
+    <string name="NA">N/A</string>
+
+    <string name="payment_stripe">Stripe</string>
+    <string name="payment_paypal">PayPal</string>
+    <string name="payment_razor">RazorPay</string>
+    <string name="payment_paystack">Paystack</string>
+    <string name="payment_payumoney">PayUMoney</string>
+    <string name="payment_need_phone">Payment need phone</string>
+
+    <string name="paypal_payment_error_1">an extremely unlikely failure occurred</string>
+    <string name="paypal_payment_error_2">The user canceled.</string>
+    <string name="paypal_payment_error_3">An invalid Payment was submitted</string>
+    <string name="paypal_payment_error_4">Paypal failure</string>
+    <string name="stripe_payment_error_1">Stripe failure</string>
+    <string name="stripe_token_error">Some error occurred when generating stripe token</string>
+    <string name="proceed_with_payment">Now Proceed with Payment</string>
+    <string name="razor_payment_error_1">Razor Pay failure</string>
+    <string name="razor_desc">Book app payment</string>
+    <string name="pay_stack_error_1">Some error occurred</string>
+
+
+    <string name="filter_title">Filter</string>
+    <string name="filter_sort">Sort By</string>
+    <string name="filter_author">Author</string>
+    <string name="filter_cat">Category</string>
+    <string name="filter_reset">RESET</string>
+    <string name="filter_apply">APPLY</string>
+
+    <string name="filter_sort_new">New Arrival</string>
+    <string name="filter_sort_pop">Popularity</string>
+    <string name="filter_sort_rating">Ratings</string>
+
+    <string name="select_sort">Please select any one</string>
+
+    <string name="change_them">Change theme</string>
+    <string name="system_default">System default</string>
+    <string name="system_light">Light Mode</string>
+    <string name="system_dark">Dark Mode</string>
+
+    <string name="app_update_title">App Update</string>
+    <string name="app_update_btn">Update</string>
+    <string name="app_cancel_btn">Cancel</string>
+
+    <string name="scheme">https</string>
+    <string name="host">services.bookup.info</string>
+    <string name="pathPrefix"></string>
+
+    <string name="get_scheme">book</string>
+    <string name="get_host">ebook_app</string>
+    <string name="get_pathPrefix">/</string>
+
+    <string name="facebook_app_id">xxxx</string>
+    <string name="fb_login_protocol_scheme">fbxxxx</string>
+    <string name="facebook_client_token">xxxx</string>
+
+    <string name="admob_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="applovin_sdk_key">xxxxx</string>
+    <string name="privacy_link">https://envato.viaviweb.in/ebook_app/page/2/privacy-policy</string>
+
+    <string name="back_key">Please click BACK again to exit</string>
+</resources>

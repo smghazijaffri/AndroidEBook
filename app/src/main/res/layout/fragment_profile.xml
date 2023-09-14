@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_99"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:fitsSystemWindows="false"
+            android:gravity="start"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:id="@+id/linearTopLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tvEdtTitle"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvToolbarTitle"
+                        style="@style/txt_OpenSansRomanBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center|start"
+                        android:layout_marginStart="@dimen/_10px"
+                        android:layout_marginTop="@dimen/_1px"
+                        android:layout_marginBottom="@dimen/_1px"
+                        android:layout_weight="0.89"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/profile_title"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_18sp"
+                        tools:text="@string/profile_title" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvEdtTitle"
+                    style="@style/txt_OpenSansRomanBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginTop="@dimen/_1px"
+                    android:layout_marginEnd="@dimen/_10px"
+                    android:layout_marginBottom="@dimen/_1px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/profile_edt"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sp"
+                    tools:text="@string/profile_edt" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_main"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivUser"
+            android:layout_width="@dimen/_100px"
+            android:layout_height="@dimen/_100px"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20px"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_3px"
+            android:src="@drawable/user_profile"
+            app:shapeAppearanceOverlay="@style/CircleImage"
+            app:strokeColor="@color/profile_border"
+            app:strokeWidth="@dimen/_3px" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_10px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/whitetoblack"
+            android:textSize="@dimen/_18sp" />
+
+        <TextView
+            android:id="@+id/tvProfileEmail"
+            style="@style/txtOpenSansRomanSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_3px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/whitetoblack"
+            android:textSize="@dimen/_14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMyPlan"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30px"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_30px"
+                android:layout_marginTop="@dimen/_20px"
+                android:layout_marginEnd="@dimen/_30px"
+                android:layout_toEndOf="@+id/btnMyRent"
+                android:background="@drawable/rectangle_white"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="@dimen/_1px"
+                android:paddingStart="@dimen/_20px"
+                android:paddingEnd="@dimen/_20px"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMyRent"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30px"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_30px"
+                android:layout_marginTop="@dimen/_20px"
+                android:layout_marginEnd="@dimen/_30px"
+                android:background="@drawable/rectangle_white"
+                android:includeFontPadding="false"
+                android:paddingStart="@dimen/_20px"
+                android:paddingEnd="@dimen/_20px"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                tools:text="@string/app_name" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProfile2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llProfile"
+        android:layout_marginTop="@dimen/_20px"
+        android:background="@drawable/rectangle_bg_bottom_sheet_review"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15px"
+            android:background="@android:color/transparent"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/red_99"
+            app:tabIndicatorHeight="@dimen/_4px"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/red_99"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabTextColor="@color/tab_text_normal" />
+
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpTab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView_noDataFound"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/no_data" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textView_noData_noDataFound"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="@string/login_require"
+            android:textColor="@color/daytonight"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogIn"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_30px"
+            android:layout_marginTop="@dimen/_20px"
+            android:layout_marginEnd="@dimen/_30px"
+            android:layout_marginBottom="@dimen/_10px"
+            android:background="@drawable/white_bg"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_1px"
+            android:paddingStart="@dimen/_30px"
+            android:paddingTop="@dimen/_10px"
+            android:paddingEnd="@dimen/_30px"
+            android:paddingBottom="@dimen/_10px"
+            android:text="@string/lbl_log_in"
+            android:textAllCaps="false"
+            android:textColor="@color/daytonight"
+            android:textSize="@dimen/_15sp"
+            tools:text="@string/lbl_log_in" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@style/ProgressBar" />
+
+    <include
+        android:id="@+id/llNoData"
+        layout="@layout/no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

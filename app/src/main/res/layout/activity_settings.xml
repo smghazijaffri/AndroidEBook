@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/row_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15px"
+        android:layout_marginEnd="@dimen/_15px"
+        android:layout_alignParentTop="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsSettingScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_main"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1px"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_setting_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlPush"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_12px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <ImageView
+                    android:id="@+id/ivSettingIcon"
+                    android:layout_width="@dimen/_50px"
+                    android:layout_height="@dimen/_50px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10px"
+                    android:src="@drawable/img_notification" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_toStartOf="@+id/scNotification"
+                    android:layout_toEndOf="@+id/ivSettingIcon"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSettingTitle"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/setting_noti"
+                        android:textColor="@color/setting_title"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/scNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5px"
+                    android:layout_marginEnd="@dimen/_5px"
+                    android:scaleX="1.2"
+                    android:scaleY="1.2" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1px"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_setting_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlLogIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_12px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <ImageView
+                    android:id="@+id/ivSettingLogIn"
+                    android:layout_width="@dimen/_50px"
+                    android:layout_height="@dimen/_50px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10px"
+                    android:src="@drawable/img_log_in" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_toStartOf="@+id/ivEdArw"
+                    android:layout_toEndOf="@+id/ivSettingLogIn"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSettingLogIn"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/setting_log_in"
+                        android:textColor="@color/setting_title"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivEdArw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_arrow_setting" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1px"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_setting_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_12px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <ImageView
+                    android:id="@+id/ivSettingDark"
+                    android:layout_width="@dimen/_50px"
+                    android:layout_height="@dimen/_50px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10px"
+                    android:src="@drawable/img_dark_mode" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_toStartOf="@+id/ivArwDark"
+                    android:layout_toEndOf="@+id/ivSettingDark"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSettingDark"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/setting_dark"
+                        android:textColor="@color/setting_title"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivArwDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_arrow_setting" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1px"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_setting_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlMoreApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_12px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <ImageView
+                    android:id="@+id/ivSettingMoreApp"
+                    android:layout_width="@dimen/_50px"
+                    android:layout_height="@dimen/_50px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10px"
+                    android:src="@drawable/img_more_app" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_toStartOf="@+id/ivArwMoreApp"
+                    android:layout_toEndOf="@+id/ivSettingMoreApp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSettingMoreApp"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/setting_more"
+                        android:textColor="@color/setting_title"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivArwMoreApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_arrow_setting" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1px"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_setting_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlRateApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_12px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <ImageView
+                    android:id="@+id/ivSettingRateApp"
+                    android:layout_width="@dimen/_50px"
+                    android:layout_height="@dimen/_50px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10px"
+                    android:src="@drawable/img_rate_app" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_toStartOf="@+id/ivArwRateApp"
+                    android:layout_toEndOf="@+id/ivSettingRateApp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSettingRateApp"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/setting_rate"
+                        android:textColor="@color/setting_title"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivArwRateApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_arrow_setting" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1px"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_10px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:background="@drawable/rectangle_setting_line" />
+
+            <RelativeLayout
+                android:id="@+id/rlShareApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_12px"
+                android:layout_marginEnd="@dimen/_20px">
+
+                <ImageView
+                    android:id="@+id/ivSettingShareApp"
+                    android:layout_width="@dimen/_50px"
+                    android:layout_height="@dimen/_50px"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/_10px"
+                    android:src="@drawable/img_share_app" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_15px"
+                    android:layout_toStartOf="@+id/ivArwShareApp"
+                    android:layout_toEndOf="@+id/ivSettingShareApp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSettingShareApp"
+                        style="@style/txtOpenSansRomanSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/setting_share"
+                        android:textColor="@color/setting_title"
+                        android:textSize="@dimen/_16sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivArwShareApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_arrow_setting" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSettingList"
+                style="@style/groupStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingStart="@dimen/_20px"
+                android:paddingEnd="@dimen/_20px" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/progress_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@style/ProgressBar" />
+
+    <include
+        android:id="@+id/llNoData"
+        layout="@layout/no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

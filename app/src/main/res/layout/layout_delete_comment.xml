@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="@dimen/_70px"
+            android:layout_height="@dimen/_2px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:background="@drawable/rectangle_bg_view_line_intro" />
+
+        <TextView
+            android:id="@+id/tvBookReview"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_15px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_delete_comment"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_20sp"
+            tools:text="@string/lbl_delete_comment" />
+
+        <TextView
+            android:id="@+id/txtWriteYourReview"
+            style="@style/txtOpenSansRomanSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:layout_marginBottom="@dimen/_10px"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/delete_comment_msg"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_17sp"
+            tools:text="@string/delete_comment_msg" />
+
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:background="@drawable/rectangle_bg_detail_line" />
+
+
+        <LinearLayout
+            android:id="@+id/llBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMaybeLater"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5px"
+                android:layout_marginBottom="@dimen/_20px"
+                android:layout_weight="0.5"
+                android:background="@color/litetohard"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lbl_maybe_later"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                tools:text="@string/lbl_maybe_later" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5px"
+                android:layout_marginBottom="@dimen/_20px"
+                android:layout_weight="0.5"
+                android:background="@color/loginskip"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lbl_submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                tools:text="@string/lbl_submit" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

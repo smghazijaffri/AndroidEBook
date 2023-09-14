@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/flHomeCat"
+        android:layout_width="@dimen/_150px"
+        android:layout_height="@dimen/_100px"
+        android:layout_marginEnd="@dimen/_8px">
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/ivHomeCat"
+            android:layout_width="@dimen/_150px"
+            android:layout_height="@dimen/_100px"
+            android:layout_gravity="start"
+            android:scaleType="fitXY"
+            app:siShape="@drawable/image_round_shape_cat"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/placeholder_landscape" />
+
+        <View
+            android:id="@+id/ivHomeCat2"
+            android:layout_width="@dimen/_150px"
+            android:layout_height="@dimen/_100px"
+            android:layout_gravity="start"
+            android:background="@drawable/rectangle_gradient_home_cat" />
+
+        <TextView
+            android:id="@+id/tvHomeCat"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:paddingStart="@dimen/_15px"
+            android:paddingTop="@dimen/_30px"
+            android:paddingEnd="@dimen/_15px"
+            android:paddingBottom="@dimen/_10px"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/home_cat"
+            android:textSize="@dimen/_14sp"
+            tools:text="@string/app_name" />
+    </FrameLayout>
+</RelativeLayout>

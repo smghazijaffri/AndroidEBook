@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fmCat"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_5px"
+        android:layout_marginEnd="@dimen/_5px"
+        android:layout_marginTop="@dimen/_10px"
+        android:layout_height="@dimen/_120px">
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/ivCat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120px"
+            android:layout_gravity="start"
+            app:siShape="@drawable/image_round_shape_cat"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/placeholder_landscape" />
+
+        <View
+            android:id="@+id/ivHomeCat2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120px"
+            android:layout_gravity="start"
+            android:background="@drawable/rectangle_gradient_home_cat" />
+
+        <TextView
+            android:id="@+id/tvCat"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:ellipsize="end"
+            android:gravity="top|start"
+            android:paddingStart="@dimen/_15px"
+            android:paddingEnd="@dimen/_15px"
+            android:paddingTop="@dimen/_30px"
+            android:paddingBottom="@dimen/_10px"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            tools:text="@string/app_name" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llDash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8px"
+        android:orientation="vertical">
+         <TextView
+            android:id="@+id/tvSubs"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_20px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/my_subs"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_20sp"
+            tools:text="@string/my_subs" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/current_plan"
+                android:textColor="@color/subs_title"
+                android:textSize="@dimen/_17sp"
+                tools:text="@string/current_plan" />
+
+            <TextView
+                android:id="@+id/tvPlanName"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_15px"
+                android:text="@string/NA"
+                android:textColor="@color/subs_title"
+                android:textSize="@dimen/_17sp"
+                tools:text="@string/current_plan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/expired_on"
+                android:textColor="@color/subs_title"
+                android:textSize="@dimen/_17sp"
+                tools:text="@string/expired_on" />
+
+            <TextView
+                android:id="@+id/tvPlanDate"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/_15px"
+                android:text="@string/NA"
+                android:textColor="@color/subs_title"
+                android:textSize="@dimen/_17sp"
+                tools:text="@string/expired_on" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@style/ProgressBar" />
+
+    <include
+        android:id="@+id/llNoData"
+        layout="@layout/no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

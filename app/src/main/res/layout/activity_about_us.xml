@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/row_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_15px"
+        android:layout_marginEnd="@dimen/_15px" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsSettingScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_main"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_5px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAppLogo"
+                    android:layout_width="@dimen/_40px"
+                    android:layout_height="@dimen/_40px"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher"
+                    app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                <TextView
+                    android:id="@+id/tvAppName"
+                    style="@style/txt_InterBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:text="@string/app_name"
+                    android:textColor="@color/about_us_title"
+                    android:textSize="@dimen/_16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15px"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:layout_width="@dimen/_40px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_about_us" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_InterSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_app_version"
+                        android:textColor="@color/about_us_title"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAppVersion"
+                        style="@style/txt_InterSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:background="@drawable/about_sub_title_bg"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/about_us_sub_title"
+                        android:textSize="@dimen/_13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15px"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:layout_width="@dimen/_40px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_app_com" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_InterBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_company"
+                        android:textColor="@color/about_us_title"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:id="@+id/tvCompany"
+                        style="@style/txt_InterSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:background="@drawable/about_sub_title_bg"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/about_us_sub_title"
+                        android:textSize="@dimen/_13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15px"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:layout_width="@dimen/_40px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_mail" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_InterBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_email_address"
+                        android:textColor="@color/about_us_title"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        style="@style/txt_InterSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:background="@drawable/about_sub_title_bg"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/about_us_sub_title"
+                        android:textSize="@dimen/_13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15px"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:layout_width="@dimen/_40px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_web" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_InterBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_website"
+                        android:textColor="@color/about_us_title"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:id="@+id/tvWebsite"
+                        style="@style/txt_InterSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:background="@drawable/about_sub_title_bg"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/about_us_sub_title"
+                        android:textSize="@dimen/_13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15px"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageButton
+                    android:layout_width="@dimen/_40px"
+                    android:layout_height="@dimen/_40px"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/about_icon_bg"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_user" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/txt_InterBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_contact"
+                        android:textColor="@color/about_us_title"
+                        android:textSize="@dimen/_12sp" />
+
+                    <TextView
+                        android:id="@+id/tvContact"
+                        style="@style/txt_InterSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5px"
+                        android:background="@drawable/about_sub_title_bg"
+                        android:includeFontPadding="false"
+                        android:paddingStart="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="2dp"
+                        android:textColor="@color/about_us_sub_title"
+                        android:textSize="@dimen/_13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15px"
+                android:layout_marginBottom="@dimen/_10px"
+                android:background="@drawable/about_sec_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/txt_InterBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_about_us"
+                    android:textColor="@color/about_us_title"
+                    android:textSize="@dimen/_16sp" />
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="WebViewLayout" />
+
+                <LinearLayout
+                    android:id="@+id/linearButtonPart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5px"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivYt"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/youtube_ic"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/youtube_ic" />
+
+                    <ImageView
+                        android:id="@+id/ivFb"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/fb_ic"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/fb_ic" />
+
+                    <ImageView
+                        android:id="@+id/ivInsta"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/insta_ic"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/insta_ic" />
+
+                    <ImageView
+                        android:id="@+id/ivWeb"
+                        android:layout_width="@dimen/_30px"
+                        android:layout_height="@dimen/_30px"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/twitter_ic"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/twitter_ic" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

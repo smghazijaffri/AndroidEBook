@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <dimen name="enchanted_view_pager_margin">5dp</dimen>
+    <dimen name="applovin_banner_height">50dp</dimen>
+    <dimen name="_1px">1.0dp</dimen>
+    <dimen name="_2px">2.0dp</dimen>
+    <dimen name="_3px">3.0dp</dimen>
+    <dimen name="_5px">5.0dp</dimen>
+    <dimen name="_4px">4.0dp</dimen>
+    <dimen name="_8px">8.0dp</dimen>
+    <dimen name="_9px">9.0dp</dimen>
+    <dimen name="_10px">10.0dp</dimen>
+    <dimen name="_11px">11.0dp</dimen>
+    <dimen name="_12px">12.0dp</dimen>
+    <dimen name="_15px">15.0dp</dimen>
+    <dimen name="_16px">16.0dp</dimen>
+    <dimen name="_17px">17.0dp</dimen>
+    <dimen name="_18px">18.0dp</dimen>
+    <dimen name="_20px">20.0dp</dimen>
+    <dimen name="_25px">25.0dp</dimen>
+    <dimen name="_28px">28.0dp</dimen>
+    <dimen name="_30px">30.0dp</dimen>
+    <dimen name="_40px">40.0dp</dimen>
+    <dimen name="_50px">50.0dp</dimen>
+    <dimen name="_60px">60.0dp</dimen>
+    <dimen name="_70px">70.0dp</dimen>
+    <dimen name="_90px">90.0dp</dimen>
+    <dimen name="_100px">100.0dp</dimen>
+    <dimen name="_120px">120.0dp</dimen>
+    <dimen name="_150px">150.0dp</dimen>
+    <dimen name="_160px">160.0dp</dimen>
+    <dimen name="_180px">180.0dp</dimen>
+    <dimen name="_200px">200.0dp</dimen>
+    <dimen name="_250px">250.0dp</dimen>
+    <dimen name="_300px">300.0dp</dimen>
+
+    <dimen name="_12sp">12.0sp</dimen>
+    <dimen name="_13sp">13.0sp</dimen>
+    <dimen name="_14sp">14.0sp</dimen>
+    <dimen name="_15sp">15.0sp</dimen>
+    <dimen name="_16sp">16.0sp</dimen>
+    <dimen name="_17sp">17.0sp</dimen>
+    <dimen name="_18sp">18.0sp</dimen>
+    <dimen name="_19sp">19.0sp</dimen>
+    <dimen name="_20sp">20.0sp</dimen>
+    <dimen name="_21sp">21.0sp</dimen>
+    <dimen name="_22sp">22.0sp</dimen>
+    <dimen name="_24sp">24.0sp</dimen>
+    <dimen name="_30sp">30.0sp</dimen>
+
+</resources>

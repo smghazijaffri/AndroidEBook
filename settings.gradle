@@ -1,0 +1,3 @@
+rootProject.name = "AndroidEBook"
+include ':app',':SmoothCheckBox-master'
+

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:theme="@style/ProgressBar" />
+
+    <include
+        android:id="@+id/llNoData"
+        layout="@layout/no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:id="@+id/llHomeMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/linearRowebookapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtEbookApp"
+                style="@style/txt_OpenSansRomanExtraBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start|center"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:singleLine="true"
+                android:text="@string/lbl_ebook_app"
+                android:textColor="@color/gray_2"
+                android:textSize="@dimen/_24sp"
+                tools:text="@string/lbl_ebook_app" />
+
+            <ImageButton
+                android:id="@+id/ibSetting"
+                android:layout_width="@dimen/_40px"
+                android:layout_height="@dimen/_40px"
+                android:layout_gravity="center|end"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rectangle_bg_setting_home"
+                android:gravity="center|end"
+                android:paddingHorizontal="@dimen/_10px"
+                android:paddingVertical="@dimen/_10px"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_setting"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollViewScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10px"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="start">
+
+            <LinearLayout
+                android:id="@+id/linearHomeScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10px"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20px"
+                    android:layout_marginEnd="@dimen/_20px"
+                    android:background="@drawable/rectangle_bg_search_home">
+
+                    <EditText
+                        android:id="@+id/edtHomeSearch"
+                        style="@style/txt_PoppinsMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/imageHomeSearch"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_search_here"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:lineSpacingExtra="@dimen/_1px"
+                        android:paddingStart="@dimen/_10px"
+                        android:paddingTop="@dimen/_10px"
+                        android:paddingEnd="@dimen/_10px"
+                        android:paddingBottom="@dimen/_10px"
+                        android:singleLine="true"
+                        android:textColor="@color/home_search_text"
+                        android:textColorHint="@color/white"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="@dimen/_16sp"
+                        tools:ignore="Autofill" />
+
+                    <ImageView
+                        android:id="@+id/imageHomeSearch"
+                        android:layout_width="@dimen/_20px"
+                        android:layout_height="@dimen/_20px"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_10px"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/img_search_home" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvHomeFeature"
+                    style="@style/txt_InterBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20px"
+                    android:layout_marginTop="@dimen/_15px"
+                    android:layout_marginEnd="@dimen/_20px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/lbl_featured"
+                    android:textColor="@color/gray_2"
+                    android:textSize="@dimen/_19sp"
+                    tools:text="@string/lbl_featured" />
+
+                <LinearLayout
+                    android:id="@+id/llFeature"
+                    style="@style/groupStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_20px"
+                    android:layout_marginTop="@dimen/_10px"
+                    android:layout_marginEnd="@dimen/_20px"
+                    android:orientation="vertical">
+
+                    <com.example.util.EnchantedViewPager
+                        android:id="@+id/vpFeatureHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_180px" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlConSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:layout_marginBottom="@dimen/_10px">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/ivHomeContinue"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvHomeConBook"
+                            style="@style/txt_InterBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20px"
+                            android:layout_marginEnd="@dimen/_20px"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/msg_continue_reading"
+                            android:textColor="@color/gray_2"
+                            android:textSize="@dimen/_19sp"
+                            tools:text="@string/msg_continue_reading" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivHomeContinue"
+                        android:layout_width="@dimen/_20px"
+                        android:layout_height="@dimen/_16px"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_20px"
+                        android:layout_marginEnd="@dimen/_20px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_home_deep_orange"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow_home_deep_orange" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvContBook"
+                    style="@style/groupStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="@dimen/_20px"
+                    android:paddingEnd="@dimen/_20px" />
+
+                <RelativeLayout
+                    android:id="@+id/rlTrendSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:layout_marginBottom="@dimen/_10px">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/ivHomeTrendBook"
+                        android:gravity="start"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvHomeTrendBook"
+                            style="@style/txt_InterBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20px"
+                            android:layout_marginEnd="@dimen/_20px"
+                            android:ellipsize="end"
+                            android:gravity="center|start"
+                            android:singleLine="true"
+                            android:text="@string/lbl_trending"
+                            android:textColor="@color/gray_2"
+                            android:textSize="@dimen/_19sp"
+                            tools:text="@string/lbl_trending" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivHomeTrendBook"
+                        android:layout_width="@dimen/_20px"
+                        android:layout_height="@dimen/_16px"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_20px"
+                        android:layout_marginEnd="@dimen/_20px"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_home_deep_orange"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow_home_deep_orange" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeTrendingBook"
+                    style="@style/groupStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingStart="@dimen/_20px"
+                    android:paddingEnd="@dimen/_20px" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeSec"
+                    style="@style/groupStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

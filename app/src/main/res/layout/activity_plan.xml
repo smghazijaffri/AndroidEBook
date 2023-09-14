@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/about_icon_bg">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_payment_close" />
+
+    <TextView
+        android:id="@+id/tvPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivClose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:ellipsize="end"
+        style="@style/txt_OpenSansRomanBold"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="@string/subscription_plan"
+        android:textColor="@color/plan_title"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/tvPlanDesc"
+        style="@style/txtOpenSansRomanSemiBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPlan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="1sp"
+        android:text="@string/subscription_msg"
+        android:textColor="@color/plan_title_desc"
+        android:textSize="14sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/tvPlanDesc"
+        android:layout_marginTop="@dimen/_15px"
+        android:layout_marginStart="@dimen/_10px"
+        android:layout_marginEnd="@dimen/_10px"
+        android:layout_marginBottom="@dimen/_10px"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlanList"
+            style="@style/groupStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="@dimen/_8px"
+            android:clipToPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/progress_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:theme="@style/ProgressBar" />
+
+        <include
+            android:id="@+id/llNoData"
+            layout="@layout/no_data_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangle_bg_bottom_sheet_review"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            style="@style/txt_OpenSansRomanBold"
+            android:includeFontPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/select_plan"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/daytonight"
+            app:cornerRadius="50dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

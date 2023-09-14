@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/toolbar_main"
+        layout="@layout/row_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+          />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_marginTop="@dimen/_5px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100px"
+                android:layout_height="@dimen/_100px"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_40px">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="@dimen/_100px"
+                    android:layout_height="@dimen/_100px"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/ic_launcher"
+                    app:shapeAppearanceOverlay="@style/CircleImage"
+                    app:strokeColor="@color/profile_border"
+                    app:strokeWidth="0dp" />
+
+                <ImageView
+                    android:id="@+id/ivEditIcon"
+                    android:layout_width="@dimen/_25px"
+                    android:layout_height="@dimen/_25px"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/_5px"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/img_edit_profile" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10px"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@color/gray_2"
+                android:textSize="@dimen/_18sp" />
+
+            <TextView
+                android:id="@+id/tvProfileEmail"
+                style="@style/txtOpenSansRomanSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_3px"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@color/edt_profile_email"
+                android:textSize="@dimen/_14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20px"
+                android:layout_marginTop="@dimen/_20px"
+                android:layout_marginEnd="@dimen/_20px"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtName"
+                    style="@style/edtBoxRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_bg_white_border"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_name"
+                    android:inputType="textPersonName"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_20px"
+                    android:paddingTop="@dimen/_15px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:paddingBottom="@dimen/_15px"
+                    android:singleLine="true"
+                    android:textColorHint="@color/edt_profile_text"
+                    android:textCursorDrawable="@drawable/cursor"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/edtEmail"
+                    style="@style/edtBoxRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:background="@drawable/rectangle_bg_white_border"
+                    android:ellipsize="end"
+                    android:enabled="false"
+                    android:hint="@string/lbl_email"
+                    android:inputType="textEmailAddress"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_20px"
+                    android:paddingTop="@dimen/_15px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:paddingBottom="@dimen/_15px"
+                    android:singleLine="true"
+                    android:textColorHint="@color/edt_profile_text"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    style="@style/edtBoxRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:background="@drawable/rectangle_bg_white_border"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_pass"
+                    android:inputType="textPassword"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_20px"
+                    android:paddingTop="@dimen/_15px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:paddingBottom="@dimen/_15px"
+                    android:singleLine="true"
+                    android:textColorHint="@color/edt_profile_text"
+                    android:textCursorDrawable="@drawable/cursor"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    style="@style/edtBoxRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:background="@drawable/rectangle_bg_white_border"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_phone"
+                    android:inputType="phone"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_20px"
+                    android:paddingTop="@dimen/_15px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:paddingBottom="@dimen/_15px"
+                    android:singleLine="true"
+                    android:textColorHint="@color/edt_profile_text"
+                    android:textCursorDrawable="@drawable/cursor"
+                    tools:ignore="Autofill" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    style="@style/txtOpenSansRomanBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px"
+                    android:layout_marginBottom="@dimen/_20px"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_30px"
+                    android:paddingTop="@dimen/_15px"
+                    android:paddingEnd="@dimen/_30px"
+                    android:paddingBottom="@dimen/_15px"
+                    android:singleLine="true"
+                    android:text="@string/profile_edt_save"
+                    android:textAllCaps="false"
+                    tools:text="@string/profile_edt_save" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

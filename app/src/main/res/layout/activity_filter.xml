@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_white">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20px"
+        android:layout_marginTop="@dimen/_30px"
+        android:layout_marginEnd="@dimen/_20px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center|start"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_close_gray" />
+
+        <TextView
+            android:id="@+id/tvNameFilter"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="@dimen/_20px"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/filter_title"
+            android:textColor="@color/gray_2"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/llShowIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTitle"
+        android:layout_marginTop="@dimen/_15px"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_20px"
+        android:paddingEnd="@dimen/_20px"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/flSortBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvSortBy"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_border_star_normal"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/_12px"
+                    android:paddingTop="@dimen/_5px"
+                    android:paddingEnd="@dimen/_12px"
+                    android:paddingBottom="@dimen/_5px"
+                    android:text="@string/filter_sort"
+                    android:textColor="@color/red_99"
+                    android:textSize="@dimen/_16sp"
+                    tools:text="@string/filter_sort" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flAuthorBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10px">
+
+                <TextView
+                    android:id="@+id/tvAuthorBy"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_border_star_normal"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/_12px"
+                    android:paddingTop="@dimen/_5px"
+                    android:paddingEnd="@dimen/_12px"
+                    android:paddingBottom="@dimen/_5px"
+                    android:text="@string/filter_author"
+                    android:textColor="@color/red_99"
+                    android:textSize="@dimen/_16sp"
+                    tools:text="@string/filter_author" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flCatBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10px">
+
+
+                <TextView
+                    android:id="@+id/tvCatBy"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rectangle_border_star_normal"
+                    android:includeFontPadding="false"
+                    android:paddingStart="@dimen/_12px"
+                    android:paddingTop="@dimen/_5px"
+                    android:paddingEnd="@dimen/_12px"
+                    android:paddingBottom="@dimen/_5px"
+                    android:text="@string/filter_cat"
+                    android:textColor="@color/red_99"
+                    android:textSize="@dimen/_16sp"
+                    tools:text="@string/filter_cat" />
+            </FrameLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/rlAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/llShowIn"
+        android:layout_marginStart="@dimen/_20px"
+        android:layout_marginTop="@dimen/_10px"
+        android:layout_marginEnd="@dimen/_20px"
+        android:layout_marginBottom="@dimen/_10px"
+        android:background="@color/filter_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTitleAuthor"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_10px"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/_10px"
+            android:singleLine="true"
+            android:text="@string/filter_author"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_19sp" />
+
+        <View
+            android:id="@+id/lineAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvTitleAuthor"
+            android:layout_marginTop="@dimen/_5px"
+            android:layout_marginBottom="@dimen/_5px"
+            android:background="@color/detail_line" />
+
+        <RelativeLayout
+            android:id="@+id/rlAuthorSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineAuthor"
+            android:layout_marginStart="@dimen/_10px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_10px"
+            android:background="@drawable/rectangle_bg_filter_search">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/home_search_text"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/edtAuthorSearch"
+                    style="@style/txt_PoppinsMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/imageAuthorSearch"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_search_here"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_15px"
+                    android:paddingTop="@dimen/_8px"
+                    android:paddingEnd="@dimen/_10px"
+                    android:paddingBottom="@dimen/_8px"
+                    android:singleLine="true"
+                    android:textColor="@color/home_search_text"
+                    android:textColorHint="@color/home_search_text"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/_16sp"
+                    tools:ignore="Autofill" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imageAuthorSearch"
+                android:layout_width="@dimen/_20px"
+                android:layout_height="@dimen/_20px"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10px"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_search_home"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            style="@style/groupStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlAuthorSearch"
+            android:layout_marginTop="@dimen/_10px"
+            android:clipToPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/progress_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:theme="@style/ProgressBar" />
+
+        <include
+            android:id="@+id/llNoData"
+            layout="@layout/no_data_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/llShowIn"
+        android:layout_marginStart="@dimen/_20px"
+        android:layout_marginTop="@dimen/_10px"
+        android:layout_marginEnd="@dimen/_20px"
+        android:layout_marginBottom="@dimen/_10px"
+        android:background="@color/filter_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTitleCategory"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_10px"
+            android:layout_marginTop="@dimen/_10px"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/filter_cat"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_19sp" />
+
+        <View
+            android:id="@+id/lineCategory"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvTitleCategory"
+            android:layout_marginTop="@dimen/_5px"
+            android:layout_marginBottom="@dimen/_5px"
+            android:background="@color/detail_line" />
+
+        <RelativeLayout
+            android:id="@+id/rlCatSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineCategory"
+            android:layout_marginStart="@dimen/_10px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_10px"
+            android:background="@drawable/rectangle_bg_filter_search">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/home_search_text"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/edtCatSearch"
+                    style="@style/txt_PoppinsMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/imageCatSearch"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_search_here"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:lineSpacingExtra="@dimen/_1px"
+                    android:paddingStart="@dimen/_15px"
+                    android:paddingTop="@dimen/_8px"
+                    android:paddingEnd="@dimen/_10px"
+                    android:paddingBottom="@dimen/_8px"
+                    android:singleLine="true"
+                    android:textColor="@color/home_search_text"
+                    android:textColorHint="@color/home_search_text"
+                    android:textCursorDrawable="@drawable/cursor"
+                    android:textSize="@dimen/_16sp"
+                    tools:ignore="Autofill" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imageCatSearch"
+                android:layout_width="@dimen/_20px"
+                android:layout_height="@dimen/_20px"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10px"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/img_search_home"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvListCategory"
+            style="@style/groupStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlCatSearch"
+            android:layout_marginTop="@dimen/_10px"
+            android:clipToPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/progressCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:theme="@style/ProgressBar" />
+
+        <include
+            android:id="@+id/llNoDataCat"
+            layout="@layout/no_data_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSortBy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/llShowIn"
+        android:layout_marginStart="@dimen/_20px"
+        android:layout_marginTop="@dimen/_10px"
+        android:layout_marginEnd="@dimen/_20px"
+        android:layout_marginBottom="@dimen/_10px"
+        android:background="@color/filter_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitleSortBy"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_10px"
+            android:layout_marginTop="@dimen/_10px"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/filter_sort"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_19sp" />
+
+        <View
+            android:id="@+id/lineSortBy"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvTitleSortBy"
+            android:layout_marginTop="@dimen/_5px"
+            android:layout_marginBottom="@dimen/_5px"
+            android:background="@color/detail_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineSortBy"
+            android:layout_marginTop="@dimen/_10px"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rgSortBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5px"
+                android:layout_marginEnd="@dimen/_5px"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbSortByNew"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_10px"
+                    android:paddingEnd="@dimen/_10px"
+                    android:text="@string/filter_sort_new"
+                    android:textColor="@color/rating_text"
+                    android:textSize="@dimen/_16sp"
+                    app:buttonTint="@color/red_99" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbSortByPop"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:paddingStart="@dimen/_10px"
+                    android:paddingEnd="@dimen/_10px"
+                    android:text="@string/filter_sort_pop"
+                    android:textColor="@color/rating_text"
+                    android:textSize="@dimen/_16sp"
+                    app:buttonTint="@color/red_99" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rbSortByRating"
+                    style="@style/txtOpenSansRomanSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:paddingStart="@dimen/_10px"
+                    android:paddingEnd="@dimen/_10px"
+                    android:text="@string/filter_sort_rating"
+                    android:textColor="@color/rating_text"
+                    android:textSize="@dimen/_16sp"
+                    app:buttonTint="@color/red_99" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_20px"
+        android:layout_marginEnd="@dimen/_20px"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReset"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5px"
+            android:layout_marginBottom="@dimen/_20px"
+            android:layout_weight="0.5"
+            android:background="@drawable/rectangle_bg_deep_orange_btn_later"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/filter_reset"
+            android:textAllCaps="true"
+            android:textColor="@color/red_99"
+            android:textSize="@dimen/_15sp"
+            tools:text="@string/filter_reset" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5px"
+            android:layout_marginBottom="@dimen/_20px"
+            android:layout_weight="0.5"
+            android:background="@drawable/rectangle_bg_deep_orange_btn_submit"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/filter_apply"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sp"
+            tools:text="@string/filter_apply" />
+
+    </LinearLayout>
+
+</RelativeLayout>

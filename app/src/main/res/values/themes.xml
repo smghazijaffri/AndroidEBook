@@ -1,0 +1,184 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AndroidEBook_V16" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/red_99</item>
+        <item name="colorPrimaryVariant">@color/red_99</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_99</item>
+        <item name="colorSecondaryVariant">@color/red_99</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/gray</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ProgressBar" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorAccent">@color/progress_bar</item>
+    </style>
+
+    <style name="groupStyle_deep_orange">
+        <item name="android:background">@color/sameliteblue</item>
+    </style>
+
+    <style name="txtOpenSansRomanBold">
+        <item name="android:fontFamily">@font/opensansromanbold</item>
+        <item name="android:textSize">@dimen/_18px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rectangle_bg_deep_orange_login_btn</item>
+    </style>
+
+    <style name="edtBoxRoundedOutline">
+        <item name="android:textSize">@dimen/_18px</item>
+        <item name="android:textColor">@color/gray_edt_text</item>
+        <item name="android:fontFamily">@font/poppinssemibold</item>
+        <item name="android:background">@drawable/rectangle_bg_white_border</item>
+    </style>
+
+
+    <style name="txtOpenSansRomanBold18">
+        <item name="android:textSize">@dimen/_18px</item>
+        <item name="android:textColor">@color/gray_2</item>
+        <item name="android:fontFamily">@font/opensansromanbold</item>
+    </style>
+
+    <style name="btnSolidRoundedSkip">
+        <item name="android:textSize">@dimen/_15px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/opensansromanbold</item>
+        <item name="android:background">@color/daytonight</item>
+    </style>
+
+    <style name="txtOpenSansRomanBoldIntro">
+        <item name="android:fontFamily">@font/opensansromanbold</item>
+        <item name="android:textSize">@dimen/_16px</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/daytonight</item>
+    </style>
+
+    <style name="etdReviewStyle">
+        <item name="android:textSize">@dimen/_15px</item>
+        <item name="android:textColor">@color/write_review_msg</item>
+        <item name="android:fontFamily">@font/soraregular</item>
+        <item name="android:background">@drawable/rectangle_bg_white_review_editbox_border</item>
+    </style>
+
+    <style name="SocialBtnStyleWhite_1">
+        <item name="android:background">@drawable/rectangle_bg_white_border_fb</item>
+    </style>
+
+    <style name="BottomMenuBg">
+        <item name="android:background">@drawable/rectangle_bg_white_bottom_bg</item>
+    </style>
+
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_feature_home</item>
+    </style>
+
+    <style name="groupStyle_deep_orange_premium_border">
+        <item name="android:background">@drawable/rectangle_bg_deep_orange_premium</item>
+    </style>
+
+    <style name="DialogTitleTextStyle" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="BodyTextStyle" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="txt_OpenSansRomanBold">
+        <item name="android:fontFamily">@font/opensansromanbold</item>
+    </style>
+
+    <style name="txtOpenSansRomanSemiBold">
+        <item name="android:fontFamily">@font/opensansromansemibold</item>
+    </style>
+
+    <style name="txt_OpenSansRomanExtraBold">
+        <item name="android:fontFamily">@font/opensansromanextrabold</item>
+    </style>
+
+    <style name="txt_PoppinsMedium">
+        <item name="android:fontFamily">@font/poppinsmedium</item>
+    </style>
+
+    <style name="txt_OpenSansExtraBold">
+        <item name="android:fontFamily">@font/opensansromanextrabold</item>
+    </style>
+
+    <style name="txt_OpenSansRomanRegular">
+        <item name="android:fontFamily">@font/opensansromanregular</item>
+    </style>
+
+    <style name="txt_InterBold">
+        <item name="android:fontFamily">@font/interbold</item>
+    </style>
+
+    <style name="txt_InterSemiBold">
+        <item name="android:fontFamily">@font/intersemibold</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rectangle_bg_bottom_sheet_review</item>
+    </style>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="tab_text">
+        <item name="android:textSize">@dimen/_16sp</item>
+        <item name="android:fontFamily">@font/opensansromanbold</item>
+    </style>
+
+    <style name="CornerRadiusImage" parent="">
+        <item name="cornerSize">@dimen/_12px</item>
+    </style>
+
+    <style name="CornerRadiusImage15" parent="">
+        <item name="cornerSize">@dimen/_15px</item>
+    </style>
+
+    <style name="CornerRadiusImage18" parent="">
+        <item name="cornerSize">@dimen/_18px</item>
+    </style>
+
+    <style name="CornerRadiusImageProfile" parent="">
+        <item name="cornerSizeTopLeft">@dimen/_12px</item>
+        <item name="cornerSizeBottomRight">@dimen/_12px</item>
+    </style>
+
+    <style name="CornerRadiusImageDelete" parent="">
+        <item name="cornerSizeTopLeft">@dimen/_12px</item>
+        <item name="cornerSizeTopRight">@dimen/_12px</item>
+    </style>
+
+    <style name="RemoveAppSplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/black</item>
+        <item name="colorAccent">@color/red_99</item>
+        <item name="android:background">@color/dialog_bg</item>
+    </style>
+</resources>

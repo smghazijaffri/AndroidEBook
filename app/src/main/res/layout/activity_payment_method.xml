@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/deep_orange_bg">
+
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_payment_close" />
+
+    <include
+        android:id="@+id/llPlan"
+        layout="@layout/row_plan_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivClose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="10dp" />
+
+    <View
+        android:id="@+id/vVMethod"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/llPlan"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/payment_method_line" />
+
+    <TextView
+        android:id="@+id/tvPlan"
+        style="@style/txt_OpenSansRomanBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vVMethod"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="@string/payment_method"
+        android:textColor="@color/plan_title"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_below="@+id/tvPlan"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPaypal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_marginTop="@dimen/_8px"
+                    android:layout_marginEnd="@dimen/_10px"
+                    android:layout_marginBottom="@dimen/_5px"
+                    app:cardBackgroundColor="@color/plan_card_bg_unselect"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <View
+                            android:id="@+id/rdPaypal"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/plan_circle_unselect" />
+
+                        <TextView
+                            android:id="@+id/tvPaypal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@+id/ivPaypal"
+                            android:layout_toEndOf="@+id/rdPaypal"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/sorabold"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Gold Plan"
+                            android:textColor="@color/plan_name_unselect"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivPaypal"
+                            android:layout_width="@dimen/_120px"
+                            android:layout_height="@dimen/_50px"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvStripe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_marginTop="@dimen/_8px"
+                    android:layout_marginEnd="@dimen/_10px"
+                    android:layout_marginBottom="@dimen/_5px"
+                    app:cardBackgroundColor="@color/plan_card_bg_unselect"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <View
+                            android:id="@+id/rdStripe"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/plan_circle_unselect" />
+
+                        <TextView
+                            android:id="@+id/tvStripe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@+id/ivStripe"
+                            android:layout_toEndOf="@+id/rdStripe"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/sorabold"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Gold Plan"
+                            android:textColor="@color/plan_name_unselect"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivStripe"
+                            android:layout_width="@dimen/_120px"
+                            android:layout_height="@dimen/_50px"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvRazorPay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_marginTop="@dimen/_8px"
+                    android:layout_marginEnd="@dimen/_10px"
+                    android:layout_marginBottom="@dimen/_5px"
+                    app:cardBackgroundColor="@color/plan_card_bg_unselect"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <View
+                            android:id="@+id/rdRazorPay"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/plan_circle_unselect" />
+
+                        <TextView
+                            android:id="@+id/tvRazorPay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@+id/ivRazorPay"
+                            android:layout_toEndOf="@+id/rdRazorPay"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/sorabold"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Gold Plan"
+                            android:textColor="@color/plan_name_unselect"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivRazorPay"
+                            android:layout_width="@dimen/_120px"
+                            android:layout_height="@dimen/_50px"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPayStack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_marginTop="@dimen/_8px"
+                    android:layout_marginEnd="@dimen/_10px"
+                    android:layout_marginBottom="@dimen/_5px"
+                    app:cardBackgroundColor="@color/plan_card_bg_unselect"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <View
+                            android:id="@+id/rdPayStack"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/plan_circle_unselect" />
+
+                        <TextView
+                            android:id="@+id/tvPayStack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@+id/ivPayStack"
+                            android:layout_toEndOf="@+id/rdPayStack"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/sorabold"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Gold Plan"
+                            android:textColor="@color/plan_name_unselect"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivPayStack"
+                            android:layout_width="@dimen/_120px"
+                            android:layout_height="@dimen/_50px"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPay"
+                    style="@style/txt_OpenSansRomanBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:includeFontPadding="false"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/payment_proceed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:backgroundTint="@color/daytonight"
+                    app:cornerRadius="50dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPayUMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10px"
+                    android:layout_marginTop="@dimen/_8px"
+                    android:layout_marginEnd="@dimen/_10px"
+                    android:layout_marginBottom="@dimen/_5px"
+                    app:cardBackgroundColor="@color/plan_card_bg_unselect"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+                        <View
+                            android:id="@+id/rdPayUMoney"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/plan_circle_unselect" />
+
+                        <TextView
+                            android:id="@+id/tvPayUMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_toStartOf="@+id/ivPayUMoney"
+                            android:layout_toEndOf="@+id/rdPayUMoney"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/sorabold"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="Gold Plan"
+                            android:textColor="@color/plan_name_unselect"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/ivPayUMoney"
+                            android:layout_width="@dimen/_120px"
+                            android:layout_height="@dimen/_50px"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/app_name" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:theme="@style/ProgressBar" />
+
+        <include
+            android:id="@+id/llNoData"
+            layout="@layout/no_data_found"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rectangle_bg_bottom_sheet_review"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</RelativeLayout>

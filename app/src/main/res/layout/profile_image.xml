@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="bottom|center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/txt_OpenSansRomanBold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20px"
+        android:layout_marginBottom="@dimen/_10px"
+        android:text="@string/edit_gallery"
+        android:textColor="@color/gray_2"
+        android:textSize="@dimen/_18sp" />
+
+
+    <View
+        android:id="@+id/view_proImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2px"
+        android:background="@color/detail_line" />
+
+
+    <TextView
+        android:id="@+id/tvGallery"
+        style="@style/txt_OpenSansRomanBold"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30px"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20px"
+        android:layout_marginBottom="@dimen/_20px"
+        android:text="@string/edit_sel_gallery"
+        android:textColor="@color/gray_2"
+        android:textSize="@dimen/_18sp" />
+
+
+</LinearLayout>

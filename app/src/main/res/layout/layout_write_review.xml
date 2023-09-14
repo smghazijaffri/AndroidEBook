@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="@dimen/_70px"
+            android:layout_height="@dimen/_2px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:background="@drawable/rectangle_bg_view_line_intro" />
+
+        <TextView
+            android:id="@+id/tvBookReview"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_15px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_book_review"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_20sp"
+            tools:text="@string/lbl_book_review" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/_10px"
+            android:text="@string/msg_how_likely_are"
+            android:textColor="@color/write_review_sub_title"
+            android:textSize="@dimen/_16sp"
+            tools:text="@string/msg_how_likely_are" />
+
+        <com.github.ornolfr.ratingview.RatingView
+            android:id="@+id/ratingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            app:drawable_empty="@drawable/ic_star_empty"
+            app:drawable_filled="@drawable/ic_star_filled"
+            app:drawable_half="@drawable/ic_star_half"
+            app:drawable_margin="2dp"
+            app:drawable_size="28dp"
+            app:max_count="5"
+            app:rating="0" />
+
+        <TextView
+            android:id="@+id/txtWriteYourReview"
+            style="@style/txt_OpenSansRomanBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/lbl_write_your_review"
+            android:textColor="@color/gray_2"
+            android:textSize="@dimen/_17sp"
+            tools:text="@string/lbl_write_your_review" />
+
+        <EditText
+            android:id="@+id/etYourReviewText"
+            style="@style/etdReviewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:background="@drawable/rectangle_bg_white_review_editbox_border"
+            android:ellipsize="end"
+            android:hint="@string/lbl_your_review_here"
+            android:inputType="text"
+            android:lineSpacingExtra="@dimen/_1px"
+            android:paddingStart="@dimen/_18px"
+            android:paddingTop="@dimen/_15px"
+            android:paddingEnd="@dimen/_30px"
+            android:paddingBottom="@dimen/_30px"
+            android:singleLine="true"
+            android:textColor="@color/write_review_hint"
+            android:textColorHint="@color/write_review_hint"
+            android:textCursorDrawable="@drawable/cursor"
+            tools:ignore="Autofill" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:background="@drawable/rectangle_bg_detail_line" />
+
+
+        <LinearLayout
+            android:id="@+id/llBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20px"
+            android:layout_marginTop="@dimen/_10px"
+            android:layout_marginEnd="@dimen/_20px"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnMaybeLater"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5px"
+                android:layout_marginBottom="@dimen/_20px"
+                android:layout_weight="0.5"
+                android:background="@color/sameliteblue"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lbl_maybe_later"
+                android:textAllCaps="true"
+                android:textColor="@color/red_99"
+                android:textSize="@dimen/_15sp"
+                tools:text="@string/lbl_maybe_later" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                style="@style/txt_OpenSansRomanBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5px"
+                android:layout_marginBottom="@dimen/_20px"
+                android:layout_weight="0.5"
+                android:background="@color/daytonight"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lbl_submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sp"
+                tools:text="@string/lbl_submit" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,104 @@
+buildscript {
+    repositories {
+        google()
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+}
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+repositories {
+    maven {
+        url "https://maven.google.com"
+    }
+}
+
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.bookup.org"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding  true
+        //noinspection DataBindingWithoutKapt
+    }
+    namespace 'com.example.androidebookapps'
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+    buildTypes.each {
+        it.buildConfigField 'String', 'My_api', app_url
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation project(path: ':SmoothCheckBox-master')
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3@aar'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation("com.tbuonomo:dotsindicator:4.3")
+    implementation 'com.github.ornolfr:rating-view:0.1.2@aar'
+    implementation 'com.facebook.android:facebook-login:15.0.1'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation 'com.google.android.gms:play-services-ads:22.4.0'
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation "com.folioreader:folioreader:0.5.4"
+    implementation 'io.github.lizhangqu:coreprogress:1.0.2'
+    implementation 'com.karumi:dexter:6.2.3'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.razorpay:checkout:1.5.13'
+    implementation 'com.stripe:stripe-android:17.1.1'
+    implementation 'com.braintreepayments.api:drop-in:4.6.0'
+    implementation 'in.payu:payu-checkout-pro:1.8.2'
+    implementation 'co.paystack.android:paystack:3.1.2'
+    implementation 'com.github.10bis:compactCreditInput:2.0.2'
+    implementation 'com.onesignal:OneSignal:4.8.5@aar'
+    implementation "androidx.concurrent:concurrent-futures:1.1.0"
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.github.ixiDev:GDPRChecker:v0.2'
+    implementation 'com.google.android.ads.consent:consent-library:1.0.8'
+    implementation('com.google.ads.mediation:facebook:6.16.0.0') {
+        exclude group: "com.google.android.gms", module: "play-services-ads"
+    }
+    implementation 'com.startapp:inapp-sdk:4.10.11'
+    implementation 'com.applovin:applovin-sdk:11.9.0'
+    implementation 'com.wortise:android-sdk:1.4.1'
+    implementation 'com.unity3d.ads:unity-ads:4.0.1'
+}
